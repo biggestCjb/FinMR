@@ -83,6 +83,45 @@ Your environment should be called ```FinMR```, and you can activate it now to ru
 ```bash
 conda activate FinMR
 ```
+### 4) Get model weight:
+Download the weights of the model from the link below
+
+```
+https://drive.google.com/drive/folders/1gPCgYS4Yfn-VUxJ3Nm4OJGNzDTPABKjS?usp=sharing
+```
+Place the downloaded folder one level below the root of the project, this is our code structure:
+
+```
+|_FinMR/
+    ├─ask_LLM
+    │  ├─Multimodal        
+    │  │  ├─models
+    │  │  └─tools
+    │  │      
+    │  └─Textual
+    ├─data
+    ├─errorLog
+    │  ├─Multimodal
+    │  │  ├─claude
+    │  │  ├─gemini
+    │  │  ├─gpt
+    │  │  ├─Llama
+    │  │  ├─llava
+    │  │  └─qwen
+    │  └─text
+    ├─evaluation
+    ├─images
+    ├─model_weight
+    │  └─clip-vit-base-patch32
+    └─outputs
+        ├─Multimodal
+        │  ├─claude
+        │  ├─gemini
+        │  ├─gpt
+        │  ├─Llama
+        │  ├─Llava
+        └─text
+```
 
 ## 📈 How to Evaluation
 
