@@ -2,7 +2,8 @@
 🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu 
 ["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org), , which contains both evaluation code and data for the **FinMR** benchmark.
 
-[[🌐 Homepage]] [[🤗 Huggingface Dataset]([https://huggingface.co/datasets/aminous1/FinMR])]  [[📖 ArXiv Paper]([https://arxiv.org])
+[[🌐 Homepage]] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]   [[📖 ArXiv Paper](https://arxiv.org)]
+
 
 
 ## 📖 Introduction
