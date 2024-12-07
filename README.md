@@ -2,7 +2,7 @@
 🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu 
 ["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org), , which contains both evaluation code and data for the **FinMR** benchmark.
 
-[[🌐 Homepage]] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]   [[📖 ArXiv Paper](https://arxiv.org)]
+[[🌐 Homepage](https://jason08022000.github.io/financial-reasoning.github.io/)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]   [[📖 ArXiv Paper](https://arxiv.org)]
 
 
 
@@ -19,7 +19,7 @@ improve reasoning. The improved insights are used for in-context learning, enhan
 This approach emphasizes iterative improvement and error correction for better accuracy.*
 
 
-You can refer to our [project homepage]() and [the paper]([https://arxiv.org]) for more details.
+You can refer to our [[project homepage](https://jason08022000.github.io/financial-reasoning.github.io/)] and [[the paper](https://arxiv.org)] for more details.
 
 ## 📊 Dataset Examples
 <details>
@@ -102,7 +102,9 @@ Extract the downloaded zip one level below the root directory of the project, wh
     │  │  ├─models
     │  │  └─tools
     │  │      
-    │  └─Textual
+    │  └─text
+    │  │  ├─models
+    │  │  └─tools
     ├─data
     ├─errorLog
     │  ├─Multimodal
@@ -113,6 +115,12 @@ Extract the downloaded zip one level below the root directory of the project, wh
     │  │  ├─llava
     │  │  └─qwen
     │  └─text
+    │  │  ├─claude
+    │  │  ├─gemini
+    │  │  ├─gpt
+    │  │  ├─Llama
+    │  │  ├─llava
+    │  │  └─deepseek
     ├─evaluation
     ├─images
     ├─model_weight
@@ -124,7 +132,13 @@ Extract the downloaded zip one level below the root directory of the project, wh
         │  ├─gpt
         │  ├─Llama
         │  ├─Llava
+        |  |─qwen
         └─text
+        │  ├─claude
+        │  ├─gemini
+        │  ├─gpt
+        │  ├─Llama
+        │  ├─deepseek
 ```
 
 ## 📈 How to Evaluation
