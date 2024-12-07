@@ -147,6 +147,7 @@ This will run the GPT API and save the outputs to `outputs/Multimodal/gpt` path.
 ### Evaluation of Model Outputs
 
 Once all the model outputs have been generated, execute the `evaluation/evaluate.ipynb` function to assess these outputs. This will examine all outputs located in the `outputs/` directory, computing overall accuracy as well as accuracy for each subject and level.
+
 **Here is our result:**
 ![FinMR schematics](https://img520.com/0GmPiK.jpg)
 ![FinMR schematics](https://img520.com/KqxI4k.png)
