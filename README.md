@@ -37,6 +37,10 @@ You can refer to our [project homepage]() and [the paper]([https://arxiv.org]) f
     <img src="https://img520.com/wzIe0D.png" width="50%"> <br>
 </p></details>
 
+<details>
+    <summary>Image Sample</summary><p align="center">
+    <img src="https://img520.com/hts5nu.jpg" width="70%"> <br>
+</p></details>
 
 ## 🏆 Leaderboard
 
