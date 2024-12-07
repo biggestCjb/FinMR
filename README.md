@@ -33,8 +33,8 @@ You can refer to our [project homepage]() and [the paper]([https://arxiv.org]) f
 </p></details>
 
 <details>
-<summary>Input image sample</summary><p align="center">
-    <img src="https://img520.com/jci7vH.png" width="50%"> <br>
+<summary>Question Sample</summary><p align="center">
+    <img src="https://img520.com/wzIe0D.png" width="50%"> <br>
 </p></details>
 
 
@@ -87,9 +87,9 @@ conda activate FinMR
 Download the weights of the model from the link below
 
 ```
-https://drive.google.com/drive/folders/1gPCgYS4Yfn-VUxJ3Nm4OJGNzDTPABKjS?usp=sharing
+htps://drive.google.com/file/d/1s41RoUx8L65EVOkEo-g73e2Mc8jTGdVb/view?usp=sharing
 ```
-Place the downloaded folder one level below the root of the project, this is our code structure:
+Extract the downloaded zip one level below the root directory of the project, which is our code structure:
 
 ```
 |_FinMR/
@@ -147,6 +147,9 @@ This will run the GPT API and save the outputs to `outputs/Multimodal/gpt` path.
 ### Evaluation of Model Outputs
 
 Once all the model outputs have been generated, execute the `evaluation/evaluate.ipynb` function to assess these outputs. This will examine all outputs located in the `outputs/` directory, computing overall accuracy as well as accuracy for each subject and level.
+**Here is our result:**
+![FinMR schematics](https://img520.com/0GmPiK.jpg)
+![FinMR schematics](https://img520.com/KqxI4k.png)
 
 You can refer to the Appendix of [the paper](https://arxiv.org) for some evaluation results of the above models.
 
