@@ -87,7 +87,7 @@ conda activate FinMR
 Download the weights of the model from the link below
 
 ```
-htps://drive.google.com/file/d/1s41RoUx8L65EVOkEo-g73e2Mc8jTGdVb/view?usp=sharing
+https://drive.google.com/file/d/1s41RoUx8L65EVOkEo-g73e2Mc8jTGdVb/view?usp=sharing
 ```
 Extract the downloaded zip one level below the root directory of the project, which is our code structure:
 
