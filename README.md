@@ -1,66 +1,114 @@
-# Enhancing Multimodal Financial Math Reasoning withReflection Module and Error Log🔥 Dataset
+# FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain🔥 Dataset
+🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu 
+["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org), , which contains both evaluation code and data for the **FinMR** benchmark.
 
-🌟  This is the official repository for the paper "[Enhancing Multimodal Financial Math Reasoning withReflection Module and Error Log](https://arxiv.org/pdf/2402.14804.pdf)", which contains both evaluation code and data for the **MATH-V** benchmark.
-
-[[🌐 Homepage]] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]  [[📖 ArXiv Paper]]
+[[🌐 Homepage]] [[🤗 Huggingface Dataset]([https://huggingface.co/datasets/aminous1/FinMR])]  [[📖 ArXiv Paper]([https://arxiv.org])
 
 
-## 👀 Introduction
+## 📖 Introduction
 
 This project introduces an innovative approach to enhance QA systems in financial reasoning tasks through the integration of a reflection module and error log. We apply this method to a Financial Math Reasoning dataset, which features multimodal reasoning challenges. Our system retrieves past errors, provides corrective feedback, and stores mistakes for long-term improvement. The experiments show significant gains in reasoning accuracy, particularly when dealing with complex financial questions.
 
-
-<p align="center">
-    <img src="Problem_Formalization_2.png" width="66%">  Each incorrect prediction, along with its corrected reasoning and feedback, is stored in the error database Derror. This database serves as a dynamic repository of past errors,
-enabling the model to continuously learn and improve by incorporating insights from previousmistakes.
-</p>
-You can refer to the [project homepage] for more details.
-
-Through extensive experimentation, we unveil a notable performance gap between current LMMs and human performance on MATH-V, underscoring the imperative for further advancements in LMMs.
-
+![FinMR schematics](https://img520.com/MBZ94b.png)
+**Figure**: *Illustrating a multimodal reasoning framework for answering questions step-by-step with iterative feedback. 
+The system takes multimodal inputs (text and images) and generates reasoning steps along with an answer inference. 
+If the output is correct, the reasoning and answer are accepted. If incorrect, the process involves rationale step 
+correction via manual annotation and error analysis. Feedback generation introduces negative examples and AI feedback to 
+improve reasoning. The improved insights are used for in-context learning, enhancing the reasoning steps and answer inference. 
+This approach emphasizes iterative improvement and error correction for better accuracy.*
 
 
-You can refer to our [project homepage]() and [the paper]() for more details.
+You can refer to our [project homepage]() and [the paper]([https://arxiv.org]) for more details.
 
-## 📐 Dataset Examples
+## 📊 Dataset Examples
+<details>
+<summary>Topics in Our Dataset</summary><p align="center">
+    <img src="https://img520.com/12EYvx.png" width="50%"> <br>
+</p></details>
 
+<details>
+<summary>Various QA Types</summary><p align="center">
+    <img src="https://img520.com/BR0HLG.png" width="50%"> <br>
+</p></details>
 
+<details>
+<summary>Input image sample</summary><p align="center">
+    <img src="https://img520.com/jci7vH.png" width="50%"> <br>
+</p></details>
 
-You can refer to the Appendix D.3 of [the paper](https://arxiv.org/pdf/2402.14804.pdf) for example images of 16 subjects.
 
 ## 🏆 Leaderboard
 
 The leaderboard is available [here](https://mathllm.github.io/mathvision/#leaderboard).
 
+## :wrench: Installation
+Our implementation is based on PyTorch and HuggingFace (transformers + datasets). 
 
+Requirements:
+* Python 3.8.5
+* Pytorch 1.10.0
+* transformers 4.20.0
+* datasets 2.3.2
+* tqdm, sklearn, numpy, pandas
 
-## 📈 Evaluation
+Step-by-step instructions to get you code and environment:
+### 1) Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/biggestCjb/FinMR.git    
+```
+
+A folder called ```FinMR``` with all the codebase should appear.
+
+### 2) Install the required packages:
+
+Make sure that you have Anaconda installed. If not - follow this [miniconda installation](https://docs.conda.io/en/latest/miniconda.html).
+
+To run Progressive Prompts code on GPU, make sure that you have a CUDA capable GPU and the [drivers](https://www.nvidia.com/download/index.aspx?lang=en-us) for your GPU are up to date. In our implementation, we used and CUDA 12.1.
+
+You can re-create our conda enviroment from ```environment.yaml``` file:
+
+```bash
+cd FinMR
+conda env create -f environment.yaml
+```
+
+Your conda should start downloading and extracting packages.
+
+### 3) Activate the environment:
+
+Your environment should be called ```FinMR```, and you can activate it now to run the scripts:
+
+```bash
+conda activate FinMR
+```
+
+## 📈 How to Evaluation
 
 ### Generating Outputs of Different Models
 
-#### Gemini
+#### Claude
 
-`python models/Gemini.py --in_path ./data/test.jsonl --save_path ./Gemini.jsonl`
+```bash
+cd ask_LLM/Multimodal/models
+python Claude_3.5.py
+```
 
-This will run the Gemini API and save the outputs to `./Gemini.jsonl` path. You can modify the system prompt, max tokens, etc. in the `benchmark_gemini` function.
+This will run the Claude API and save the outputs to `outputs/Multimodal/claude` path. 
 
-#### GPT_with_caption
+#### GPT
 
-Generate image captions using GPT-4V:
-
-`python models/GPT_with_caption.py --model gpt-4-vision-preview --in_path ./data/test.jsonl --save_path ./data/gpt4v-captions.jsonl`
-
-Generate outputs using ChatGPT-3.5 or GPT-4 with image captions:
-
-`python models/GPT_with_caption.py --model gpt-3.5-turbo-0125 (gpt-4-turbo-preview) --in_path ./data/test.jsonl --save_path ./gpt3.5_caption.jsonl (./gpt4_caption.jsonl)`
-
-
+```bash
+cd ask_LLM/Multimodal/models
+python GPT_4o.py
+```
+This will run the GPT API and save the outputs to `outputs/Multimodal/gpt` path. 
 
 ### Evaluation of Model Outputs
 
-Once all the model outputs have been generated, execute the `python evaluation/evaluate.py` function to assess these outputs. This script will examine all outputs located in the `outputs/` directory, computing overall accuracy as well as accuracy for each subject and level.
+Once all the model outputs have been generated, execute the `evaluation/evaluate.ipynb` function to assess these outputs. This will examine all outputs located in the `outputs/` directory, computing overall accuracy as well as accuracy for each subject and level.
 
-You can refer to the Appendix E and F of [the paper](https://arxiv.org/pdf/2402.14804.pdf) for some evaluation results of the above models.
+You can refer to the Appendix of [the paper](https://arxiv.org) for some evaluation results of the above models.
 
 ## 📝 Citation
 
