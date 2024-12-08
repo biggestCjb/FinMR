@@ -52,10 +52,10 @@ The leaderboard is available [here](https://jason08022000.github.io/financial-re
 Our implementation is based on PyTorch and HuggingFace (transformers + datasets). 
 
 Requirements:
-* Python 3.8.5
-* Pytorch 1.10.0
-* transformers 4.20.0
-* datasets 2.3.2
+* Python: 3.12.2
+* Pytorch: 2.5.0
+* Transformers: 4.46.3
+* Datasets: 3.1.0
 * tqdm, sklearn, numpy, pandas
 
 Step-by-step instructions to get you code and environment:
