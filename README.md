@@ -7,8 +7,8 @@
 
 
 ## 📖 Introduction
-
-This project introduces an innovative approach to enhance QA systems in financial reasoning tasks through the integration of a reflection module and error log. We apply this method to a Financial Math Reasoning dataset, which features multimodal reasoning challenges. Our system retrieves past errors, provides corrective feedback, and stores mistakes for long-term improvement. The experiments show significant gains in reasoning accuracy, particularly when dealing with complex financial questions.
+We present FinMR, a novel dataset designed to evaluate and enhance financial reasoning capabilities in multimodal models. FinMR includes 3,200 expert-authored examples with detailed annotations covering both expertise and mathematical reasoning. This dataset addresses the unique challenges of the financial domain, such as complex numerical calculations and domain-specific knowledge-intensive tasks.
+Additionally, we propose a training-free framework for generating dynamic negative examples with AI-driven feedback, which effectively enhances reasoning performance and supports iterative learning. FinMR serves as a valuable resource for advancing multimodal financial reasoning research.
 
 ![FinMR schematics](https://img520.com/MBZ94b.png)
 **Figure**: *Illustrating a multimodal reasoning framework for answering questions step-by-step with iterative feedback. 
