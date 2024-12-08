@@ -1,5 +1,5 @@
 # FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain🔥 Dataset
-🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu 
+🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu ,Zhuoheng Li
 ["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org), , which contains both evaluation code and data for the **FinMR** benchmark.
 
 [[🌐 Homepage](https://jason08022000.github.io/financial-reasoning.github.io/)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]   [[📖 ArXiv Paper](https://arxiv.org)]
@@ -7,8 +7,6 @@
 
 
 ## 📖 Introduction
-We present FinMR, a novel dataset designed to evaluate and enhance financial reasoning capabilities in multimodal models. FinMR includes 3,200 expert-authored examples with detailed annotations covering both expertise and mathematical reasoning. This dataset addresses the unique challenges of the financial domain, such as complex numerical calculations and domain-specific knowledge-intensive tasks.
-Additionally, we propose a training-free framework for generating dynamic negative examples with AI-driven feedback, which effectively enhances reasoning performance and supports iterative learning. FinMR serves as a valuable resource for advancing multimodal financial reasoning research.
 
 ![FinMR schematics](https://img520.com/MBZ94b.png)
 **Figure**: *Illustrating a multimodal reasoning framework for answering questions step-by-step with iterative feedback. 
@@ -179,7 +177,7 @@ If you find this benchmark useful in your research, please consider citing this 
 ```
     @article{article_id,
     title     = {Enhancing Multimodal Financial Math Reasoning with Reflection Module and Error Log},
-    author    = {Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu},
+    author    = {Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu, Zhouheng Li},
     year      = {2024},
     journal   = {arXiv},
     primaryClass={cs.CV}
