@@ -123,7 +123,7 @@ Extract the downloaded zip one level below the root directory of the project, wh
     │  │  └─deepseek
     ├─evaluation
     ├─images
-    ├─model_weight
+    ├─model_weight ——>*You should unzip here!
     │  └─clip-vit-base-patch32
     └─outputs
         ├─Multimodal
