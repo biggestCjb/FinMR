@@ -107,10 +107,10 @@ def inputPrompt(question):
     # Build the user message
     human_message = HumanMessage(content=[])
 
-    if len(question["Share Context"]) != 0:
+    if question["Share Context"] is not None:
         human_message.content.append({"type": "text", "text": "Context: " + question["Share Context"]})
 
-    if len(question["Share Image"]) != 0:
+    if question["Share Context"] is not None:
         for path in question["Share Image"]:
             image_url = load_env_vars().get("root_dir") + path
             image_data = image_to_base64(image_url)
@@ -118,7 +118,7 @@ def inputPrompt(question):
 
     human_message.content.append({"type": "text", "text": "Question: " + question["Question Text"]})
 
-    if len(question["Image"]) != 0:
+    if question["Image"] is not None:
         image_url = load_env_vars().get("root_dir") + question["Image"]
         image_data = image_to_base64(image_url)
         human_message.content.append({"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_data}"}})
@@ -148,10 +148,10 @@ def FeedbackPrompt(question):
     # Build the user message
     human_message = HumanMessage(content=[])
 
-    if len(question["Share Context"]) != 0:
+    if question["Share Context"] is not None:
         human_message.content.append({"type": "text", "text": "Context: " + question["Share Context"]})
 
-    if len(question["Share Image"]) != 0:
+    if question["Share Context"] is not None:
         for path in question["Share Image"]:
             image_url = load_env_vars().get("root_dir") + path
             image_data = image_to_base64(image_url)
@@ -159,7 +159,7 @@ def FeedbackPrompt(question):
 
     human_message.content.append({"type": "text", "text": "Question: " + question["Question Text"]})
 
-    if len(question["Image"]) != 0:
+    if question["Share Context"] is not None:
         image_url = load_env_vars().get("root_dir") + question["Image"]
         image_data = image_to_base64(image_url)
         human_message.content.append({"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_data}"}})
@@ -195,10 +195,10 @@ def ICLPrompt(question, example):
     # Build the user message
     human_message = HumanMessage(content=[])
     human_message.content.append({"type": "text", "text": "Previous Learning Document: "})
-    if len(example["Share Context"]) != 0:
+    if question["Share Context"] is not None:
         human_message.content.append({"type": "text", "text": "Context: " + example["Share Context"]})
 
-    if len(example["Share Image"]) != 0:
+    if question["Share Context"] is not None:
         for path in example["Share Image"]:
             image_url = load_env_vars().get("root_dir") + path
             image_data = image_to_base64(image_url)
@@ -206,7 +206,7 @@ def ICLPrompt(question, example):
 
     human_message.content.append({"type": "text", "text": "Question: " + example["Question Text"]})
 
-    if len(example["Image"]) != 0:
+    if question["Share Context"] is not None:
         image_url = load_env_vars().get("root_dir") + example["Image"]
         image_data = image_to_base64(image_url)
         human_message.content.append({"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_data}"}})
@@ -217,10 +217,10 @@ def ICLPrompt(question, example):
 
 
     human_message.content.append({"type": "text", "text": "Current Question is as follows: "})
-    if len(question["Share Context"]) != 0:
+    if question["Share Context"] is not None:
         human_message.content.append({"type": "text", "text": "Context: " + question["Share Context"]})
 
-    if len(question["Share Image"]) != 0:
+    if question["Share Context"] is not None:
         for path in question["Share Image"]:
             image_url = load_env_vars().get("root_dir") + path
             image_data = image_to_base64(image_url)
@@ -228,7 +228,7 @@ def ICLPrompt(question, example):
 
     human_message.content.append({"type": "text", "text": "Question: " + question["Question Text"]})
 
-    if len(question["Image"]) != 0:
+    if question["Image"] is not None:
         image_url = load_env_vars().get("root_dir") + question["Image"]
         image_data = image_to_base64(image_url)
         human_message.content.append({"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_data}"}})

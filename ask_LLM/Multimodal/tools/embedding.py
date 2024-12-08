@@ -67,7 +67,7 @@ def clipEmbedding(data):
     textdata = "Question:" + data.get("Question Text") + " Options:" + str(data.get("Options")) + " Correct Answer:" + data.get("Answer")
     
     # Check if an image is provided
-    if data.get("Image") != '':
+    if data.get("Image") is not None:
         image_path = load_env_vars().get("root_dir") + data.get("Image") 
         
         image = Image.open(image_path)
