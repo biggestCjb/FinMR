@@ -48,7 +48,7 @@ You can refer to our [[project homepage](https://jason08022000.github.io/financi
 
 ## 🏆 Leaderboard
 
-The leaderboard is available [here](https://mathllm.github.io/mathvision/#leaderboard).
+The leaderboard is available [here](https://jason08022000.github.io/financial-reasoning.github.io/#leaderboard).
 
 ## :wrench: Installation
 Our implementation is based on PyTorch and HuggingFace (transformers + datasets). 
