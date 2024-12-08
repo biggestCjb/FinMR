@@ -8,10 +8,13 @@
 
 
 ## 📖 Introduction
-We present FinMR, a novel dataset designed to evaluate and enhance financial reasoning capabilities in multimodal models. FinMR includes 3,200 expert-authored examples with detailed annotations covering both expertise and mathematical reasoning. This dataset addresses the unique challenges of the financial domain, such as complex numerical calculations and domain-specific knowledge-intensive tasks.
-Additionally, we propose a training-free framework for generating dynamic negative examples with AI-driven feedback, which effectively enhances reasoning performance and supports iterative learning. FinMR serves as a valuable resource for advancing multimodal financial reasoning research.
+We present FinMR, a novel dataset designed to evaluate and enhance financial reasoning capabilities in multimodal models.
+FinMR includes 3,200 expert-authored examples with detailed annotations covering both expertise and mathematical reasoning. 
+This dataset addresses the unique challenges of the financial domain, such as complex numerical calculations and domain-specific 
+knowledge-intensive tasks. Additionally, we propose a training-free framework for generating dynamic negative examples with AI-driven 
+feedback, which effectively enhances reasoning performance and supports iterative learning. FinMR serves as a valuable resource for advancing multimodal financial reasoning research.
 
-![FinMR schematics](https://img520.com/MBZ94b.png)
+![FinMR schematics](./assets/1.png)
 **Figure**: *Illustrating a multimodal reasoning framework for answering questions step-by-step with iterative feedback. 
 The system takes multimodal inputs (text and images) and generates reasoning steps along with an answer inference. 
 If the output is correct, the reasoning and answer are accepted. If incorrect, the process involves rationale step 
@@ -25,22 +28,22 @@ You can refer to our [[project homepage](https://jason08022000.github.io/financi
 ## 📊 Dataset Examples
 <details>
 <summary>Topics in Our Dataset</summary><p align="center">
-    <img src="https://img520.com/12EYvx.png" width="50%"> <br>
+    <img src="./assets/2.png" width="50%"> <br>
 </p></details>
 
 <details>
 <summary>Various QA Types</summary><p align="center">
-    <img src="https://img520.com/BR0HLG.png" width="50%"> <br>
+    <img src="./assets/3.png" width="50%"> <br>
 </p></details>
 
 <details>
 <summary>Question Sample</summary><p align="center">
-    <img src="https://img520.com/wzIe0D.png" width="50%"> <br>
+    <img src="./assets/4.png" width="50%"> <br>
 </p></details>
 
 <details>
     <summary>Image Sample</summary><p align="center">
-    <img src="https://img520.com/hts5nu.jpg" width="70%"> <br>
+    <img src="./assets/5.jpg" width="70%"> <br>
 </p></details>
 
 ## 🏆 Leaderboard
@@ -168,8 +171,8 @@ This will run the GPT API and save the outputs to `outputs/Multimodal/gpt` path.
 Once all the model outputs have been generated, execute the `evaluation/evaluate.ipynb` function to assess these outputs. This will examine all outputs located in the `outputs/` directory, computing overall accuracy as well as accuracy for each subject and level.
 
 **Here is our result:**
-![FinMR schematics](https://img520.com/0GmPiK.jpg)
-![FinMR schematics](https://img520.com/KqxI4k.png)
+![FinMR schematics](./assets/6.png)
+![FinMR schematics](./assets/7.png)
 
 You can refer to the Appendix of [the paper](https://arxiv.org) for some evaluation results of the above models.
 
