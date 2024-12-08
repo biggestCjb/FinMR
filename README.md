@@ -1,7 +1,5 @@
 # FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain🔥 Dataset
-🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu ,Zhuoheng Li
-
-["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org) , which contains both evaluation code and data for the **FinMR** benchmark.
+🌟 This repository includes the code related to this project, see the paper for more details["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org) , which contains both evaluation code and data for the **FinMR** benchmark.
 
 [[🌐 Homepage](https://jason08022000.github.io/financial-reasoning.github.io/)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]   [[📖 ArXiv Paper](https://arxiv.org)]
 
