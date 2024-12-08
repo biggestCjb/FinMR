@@ -17,9 +17,9 @@ def load_env_vars():
         "api_key": os.getenv("API_KEY"),
         "base_url": os.getenv("BASE_URL"),
         "root_dir": root_dir,
-        "dataset": root_dir + "data/data_v5.json",
+        "dataset": root_dir + "data/FinQA_data.json",
         "temp_path": root_dir + "images/tmp/resized_image.png",
         "model_path": root_dir + "model_weight/",
-        "ErrorLogPath": root_dir + "errorLog/image+text/",
-        "cot_path": root_dir + "outputs/image+text/",
+        "ErrorLogPath": root_dir + "errorLog/Multimodal/",
+        "cot_path": root_dir + "outputs/Multimodal/",
     }

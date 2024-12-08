@@ -178,7 +178,7 @@ You can refer to the Appendix of [the paper](https://arxiv.org) for some evaluat
 
 ## 📝 Citation
 
-If you find this benchmark useful in your research, please consider citing this BibTex:
+<!-- If you find this benchmark useful in your research, please consider citing this BibTex:
 
 ```
     @article{article_id,
@@ -188,7 +188,7 @@ If you find this benchmark useful in your research, please consider citing this 
     journal   = {arXiv},
     primaryClass={cs.CV}
     }
-```
+``` -->
 
 ## 🧠 Related Work
 
